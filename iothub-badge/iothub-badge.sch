@@ -1,0 +1,138 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Azure IoT Hub Badge"
+Date "2018-12-01"
+Rev "1.0"
+Comp "Pierre Cauchois"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Battery_Cell BT0
+U 1 1 5C030719
+P 3100 3250
+F 0 "BT0" H 2900 3400 50  0000 L CNN
+F 1 "Battery_Cell" H 2500 3300 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_3000_1x12mm" V 3100 3310 50  0001 C CNN
+F 3 "~" V 3100 3310 50  0001 C CNN
+	1    3100 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D0
+U 1 1 5C030787
+P 4200 3200
+F 0 "D0" V 4238 3083 50  0000 R CNN
+F 1 "LED" V 4147 3083 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_Clear" H 4200 3200 50  0001 C CNN
+F 3 "~" H 4200 3200 50  0001 C CNN
+	1    4200 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Switch:SW_SPDT SW0
+U 1 1 5C03098A
+P 3700 3050
+F 0 "SW0" H 3650 2850 50  0000 C CNN
+F 1 "SW_SPDT" H 3550 2950 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPDT_PCM12" H 3700 3050 50  0001 C CNN
+F 3 "" H 3700 3050 50  0001 C CNN
+	1    3700 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3900 3050 4200 3050
+Wire Wire Line
+	4200 3350 3500 3350
+$Comp
+L Device:LED D1
+U 1 1 5C030A64
+P 4600 3200
+F 0 "D1" V 4638 3083 50  0000 R CNN
+F 1 "LED" V 4547 3083 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_Clear" H 4600 3200 50  0001 C CNN
+F 3 "~" H 4600 3200 50  0001 C CNN
+	1    4600 3200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4200 3050 4600 3050
+Connection ~ 4200 3050
+Wire Wire Line
+	4600 3350 4200 3350
+Connection ~ 4200 3350
+$Comp
+L Device:LED D2
+U 1 1 5C03902A
+P 4950 3200
+F 0 "D2" V 4988 3083 50  0000 R CNN
+F 1 "LED" V 4897 3083 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_Clear" H 4950 3200 50  0001 C CNN
+F 3 "~" H 4950 3200 50  0001 C CNN
+	1    4950 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5C039031
+P 5300 3200
+F 0 "D3" V 5338 3083 50  0000 R CNN
+F 1 "LED" V 5247 3083 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_Clear" H 5300 3200 50  0001 C CNN
+F 3 "~" H 5300 3200 50  0001 C CNN
+	1    5300 3200
+	0    -1   -1   0   
+$EndComp
+Connection ~ 4600 3050
+Connection ~ 4600 3350
+Connection ~ 4950 3350
+Wire Wire Line
+	4950 3350 5300 3350
+Connection ~ 4950 3050
+Wire Wire Line
+	4950 3050 5300 3050
+Wire Wire Line
+	4600 3050 4950 3050
+Wire Wire Line
+	4600 3350 4950 3350
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5C032D1D
+P 3250 2950
+F 0 "#FLG0101" H 3250 3025 50  0001 C CNN
+F 1 "PWR_FLAG" H 3250 3124 50  0000 C CNN
+F 2 "" H 3250 2950 50  0001 C CNN
+F 3 "~" H 3250 2950 50  0001 C CNN
+	1    3250 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5C032D9A
+P 3500 3350
+F 0 "#PWR0101" H 3500 3100 50  0001 C CNN
+F 1 "GND" H 3505 3177 50  0000 C CNN
+F 2 "" H 3500 3350 50  0001 C CNN
+F 3 "" H 3500 3350 50  0001 C CNN
+	1    3500 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3050 3100 2950
+Wire Wire Line
+	3100 2950 3250 2950
+Wire Wire Line
+	3500 2950 3250 2950
+Connection ~ 3250 2950
+Wire Wire Line
+	3500 3150 3500 3350
+Connection ~ 3500 3350
+Wire Wire Line
+	3100 3350 3500 3350
+$EndSCHEMATC
